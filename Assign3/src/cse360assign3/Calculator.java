@@ -2,6 +2,7 @@
  * Calculator 
  * Author: Walter Buga 
  * PIN: 204
+ * https://github.com/wallycobra/Assign3.git
  */
 package cse360assign3;
 
@@ -19,20 +20,21 @@ public class Calculator {
 	 * @return
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	/**
 	 * Adds the value
 	 * @param value
 	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	/**
 	 * Subtract the value
 	 * @param value
 	 */
 	public void subtract (int value) {
+		total = total - value;
 		
 	}
 	/**
@@ -40,13 +42,21 @@ public class Calculator {
 	 * @param value
 	 */
 	public void multiply (int value) {
-		
+		total = total*value;
 	}
 	/**
 	 * Divide the value
 	 * @param value
 	 */
 	public void divide (int value) {
+		if (value == 0)
+		{
+			total = 0;
+		}
+		else
+		{
+			total = total/value;
+		}
 		
 	}
 	/**
