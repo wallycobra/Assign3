@@ -1,5 +1,5 @@
 /**
- * Calculator 
+ * Calculator  
  * Author: Walter Buga 
  * PIN: 204
  * https://github.com/wallycobra/Assign3.git
@@ -9,6 +9,7 @@ package cse360assign3;
 public class Calculator {
 
 	private int total;
+	String finish = "0";
 	/**
 	 *  Calculator constructor
 	 */
@@ -20,7 +21,9 @@ public class Calculator {
 	 * @return
 	 */
 	public int getTotal () {
+		finish = finish +" = "+total;
 		return total;
+		
 	}
 	/**
 	 * Adds the value
@@ -28,6 +31,8 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		total = total + value;
+		finish = finish +" + "+value;
+		
 	}
 	/**
 	 * Subtract the value
@@ -35,6 +40,7 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		total = total - value;
+		finish = finish +" - "+value;
 		
 	}
 	/**
@@ -43,6 +49,7 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		total = total*value;
+		finish = finish +" * "+value;
 	}
 	/**
 	 * Divide the value
@@ -57,13 +64,13 @@ public class Calculator {
 		{
 			total = total/value;
 		}
-		
+		finish = finish +" / "+value;
 	}
 	/**
 	 * Print the history of calculations
 	 * @return
 	 */
 	public String getHistory () {
-		return "";
+		return finish;
 	}
 }
